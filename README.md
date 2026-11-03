@@ -24,7 +24,7 @@ scripts/prerender.mjs   Inserta el HTML renderizado en dist/index.html
 src/data/site.ts        Todos los textos y datos de la empresa (editar acá)
 src/data/trabajos.ts    Fotos de la galería de trabajos
 src/lib/validation.ts   Validación compartida cliente/servidor (+ tests)
-src/components/         Header, Hero, WellDiagram, About, Services, Equipment, Works, Contact, ContactForm, Footer, Logo, ui/
+src/components/         Header, Hero, About, Services, Equipment, Works, Contact, ContactForm, Footer, Logo, ui/
 public/                 favicon, robots.txt, sitemap.xml, brand/, images/trabajos/
 ```
 

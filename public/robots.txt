@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gomez-perforaciones-primer-diseno.vercel.app/sitemap.xml
+Sitemap: https://gomez-perforaciones.vercel.app/sitemap.xml
