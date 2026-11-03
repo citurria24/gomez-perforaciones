@@ -1,0 +1,64 @@
+@import '@fontsource-variable/archivo/wdth.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  --color-navy: #123e73;
+  --color-navy-deep: #0b2a50;
+  --color-water: #1284ce;
+  --color-water-ink: #0d64a0; /* azul accesible para texto sobre blanco */
+  --color-water-soft: #e6f2fb;
+  --color-mist: #f3f6f9;
+  --color-line: #dce4ec;
+  --color-ink: #13233a;
+  --color-slate: #4b5c71;
+  --color-wa: #177d43;
+  --color-wa-hover: #12673a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 {
+    @apply text-navy;
+    font-stretch: 92%;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 3px solid var(--color-water);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Lightbox nativo (<dialog>) */
+dialog.lightbox {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.2s ease, transform 0.2s ease, overlay 0.2s allow-discrete, display 0.2s allow-discrete;
+}
+dialog.lightbox[open] { opacity: 1; transform: none; }
+@starting-style {
+  dialog.lightbox[open] { opacity: 0; transform: scale(0.98); }
+}
+dialog.lightbox::backdrop { background: rgb(8 24 46 / 0.85); }
