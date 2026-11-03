@@ -17,3 +17,27 @@ export function TikTokIcon({ className = 'size-5' }: P) {
     </svg>
   )
 }
+
+export function InstagramIcon({ className = 'size-5' }: P) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+      <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
+      <circle cx="12" cy="12" r="4.2" />
+      <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+export function FacebookIcon({ className = 'size-5' }: P) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.62 23.1 24 18.1 24 12.07" />
+    </svg>
+  )
+}
+
+export function SocialIcon({ name, className }: { name: 'TikTok' | 'Instagram' | 'Facebook'; className?: string }) {
+  if (name === 'Instagram') return <InstagramIcon className={className} />
+  if (name === 'Facebook') return <FacebookIcon className={className} />
+  return <TikTokIcon className={className} />
+}

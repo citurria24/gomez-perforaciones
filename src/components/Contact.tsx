@@ -1,7 +1,7 @@
 import { Phone } from 'lucide-react'
 import { company } from '../data/site'
 import { ContactForm } from './ContactForm'
-import { TikTokIcon, WhatsAppIcon } from './ui/BrandIcons'
+import { SocialIcon, WhatsAppIcon } from './ui/BrandIcons'
 import { ButtonLink } from './ui/Button'
 import { container } from './ui/SectionHeading'
 
@@ -35,12 +35,14 @@ export function Contact() {
             </ul>
 
             <h3 className="mt-8 text-sm font-semibold text-white/70">Redes sociales</h3>
-            <ul className="mt-3">
+            <ul className="mt-3 space-y-1">
               {company.social.map((s) => (
                 <li key={s.href}>
                   <a href={s.href} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-3 font-medium text-white hover:text-[#9fd0f0]">
-                    <TikTokIcon />
-                    {s.name} {s.handle}
+                    <SocialIcon name={s.name} />
+                    <span>
+                      {s.name} <span className="text-white/65">{s.handle}</span>
+                    </span>
                   </a>
                 </li>
               ))}

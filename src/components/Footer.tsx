@@ -1,6 +1,6 @@
 import { company, nav } from '../data/site'
 import { Logo } from './Logo'
-import { TikTokIcon, WhatsAppIcon } from './ui/BrandIcons'
+import { SocialIcon, WhatsAppIcon } from './ui/BrandIcons'
 import { container } from './ui/SectionHeading'
 
 export function Footer() {
@@ -42,7 +42,7 @@ export function Footer() {
             {company.social.map((s) => (
               <li key={s.href}>
                 <a href={s.href} target="_blank" rel="noopener noreferrer" className={`${link} inline-flex items-center gap-2`}>
-                  <TikTokIcon className="size-4" /> {s.name}
+                  <SocialIcon name={s.name} className="size-4" /> {s.name}
                 </a>
               </li>
             ))}

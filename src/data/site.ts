@@ -11,7 +11,11 @@ export const company = {
   whatsappBudget:
     'https://wa.me/59896116454?text=' +
     encodeURIComponent('Hola, quisiera solicitar un presupuesto para un pozo de agua.'),
-  social: [{ name: 'TikTok', handle: '@ros.gomez.perfora', href: 'https://www.tiktok.com/@ros.gomez.perfora' }],
+  social: [
+    { name: 'TikTok', handle: '@ros.gomez.perfora', href: 'https://www.tiktok.com/@ros.gomez.perfora' },
+    { name: 'Instagram', handle: '@gomezperforacionesuy', href: 'https://www.instagram.com/gomezperforacionesuy' },
+    { name: 'Facebook', handle: 'Gómez Perforaciones', href: 'https://www.facebook.com/profile.php?id=61596075454844' },
+  ] as const,
   credit: { name: 'Carlos Iturria', href: 'https://www.linkedin.com/in/carlos-iturria/' },
 }
 
